@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
   string nomeAluno;
-  double nota1, nota2, media;
+  double nota1, nota2, nota3, media;
 
   cout << "Digite nome do aluno: ";
   cin >> nomeAluno;
@@ -16,7 +16,10 @@ int main(){
   cout << "Digite a segunda nota: ";
   cin >> nota2;
 
-  media = (nota1 + nota2) / 2;
+  cout << "Digite a terceira nota: ";
+  cin >> nota3;
+
+  media = (nota1 + nota2 + nota3) / 3;
 
   cout << "___RESULTADO___" << endl;
   cout << "Aluno: " << nomeAluno << endl;
