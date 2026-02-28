@@ -2,6 +2,25 @@
 #include <string>
 
 using namespace std;
+
+string AddAluno(){
+
+  string nomeAluno;
+  string codigoAluno;
+  int idadeAluno;
+  cout << "Digite o nome do aluno: ";
+  cin >> nomeAluno;
+  cout << "Digite o código do aluno: ";
+  cin >> codigoAluno;
+  cout << "Digite a idade do aluno: ";
+  cin >> idadeAluno;
+  cout << "Aluno adicionado: " << nomeAluno << ", Código: " << codigoAluno << ", Idade: " << idadeAluno << endl;
+
+  string alunoInfo = nomeAluno + "," + codigoAluno + "," + to_string(idadeAluno);
+  return alunoInfo;
+}
+
+
 void media(){
    string nomeAluno;
   double nota1, nota2, nota3, media;
@@ -33,7 +52,8 @@ void menu(){
   int opcao;
   cout << "__MENU__" << endl;
   cout << "1. Calcular média" << endl;
-  cout << "2. Sair" << endl;
+  cout << "2. Adicionar aluno" << endl;
+  cout << "3. Sair" << endl;
   cout << "Escolha uma opção: ";
   cin >> opcao;
   switch(opcao){
@@ -41,7 +61,9 @@ void menu(){
       media();
       break;
     case 2:
-      cout << "Saindo do programa..." << endl;
+      AddAluno();
+      break;
+    case 3:
       exit(0);
     default:
       cout << "Opção inválida. Tente novamente." << endl;
