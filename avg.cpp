@@ -18,7 +18,7 @@ int main(){
 
   cout << "Digite a terceira nota: ";
   cin >> nota3;
-
+  nota3 *=2;
   media = (nota1 + nota2 + nota3) / 3;
 
   cout << "___RESULTADO___" << endl;
@@ -27,7 +27,7 @@ int main(){
 
   bool aprovado = media >= 6.0;
   cout << "Aprovado? (1 para sim, 0 para não): " << aprovado << endl;
-
+  cout << "Nota 3: " << nota3 << endl;// feito para testar a saida do valor 2
   return 0;
 
 
